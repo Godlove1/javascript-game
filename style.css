@@ -1,0 +1,161 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px;
+}
+
+body main {
+  width: 100%;
+  max-width: 470px;
+  height: 60vh;
+  border: 2px solid black;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.other .board {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: teal;
+  color: white;
+  cursor: pointer;
+}
+
+.other .board .wrapper {
+  width: 100%;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.other .board #score {
+  background: black;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.other .board .start {
+  background: green;
+  padding: 8px;
+  border-radius: 10px;
+  border: 1px solid;
+}
+
+.other .board .start:hover {
+  background: turquoise;
+}
+
+.game {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border: 2px solid red;
+}
+
+.game .character {
+  width: 40px;
+  height: auto;
+  position: absolute;
+  bottom: 40px;
+  border-radius: 10px;
+}
+
+.game img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+
+.game .animate {
+  -webkit-animation: jump 500ms infinite;
+  animation: jump 500ms infinite;
+}
+
+@-webkit-keyframes jump {
+  0% {
+    top: 150px;
+  }
+  30% {
+    top: 100px;
+  }
+  70% {
+    top: 100px;
+  }
+  100% {
+    top: 150px;
+  }
+}
+
+@keyframes jump {
+  0% {
+    top: 150px;
+  }
+  30% {
+    top: 100px;
+  }
+  70% {
+    top: 100px;
+  }
+  100% {
+    top: 150px;
+  }
+}
+
+.game .block {
+  width: 40px;
+  height: auto;
+  position: absolute;
+  bottom: 50px;
+  right: 0;
+  left: 470px;
+  -webkit-animation: block 2s infinite;
+  animation: block 2s infinite;
+}
+
+@-webkit-keyframes block {
+  0% {
+    left: 470px;
+  }
+  100% {
+    left: -100px;
+  }
+}
+
+@keyframes block {
+  0% {
+    left: 470px;
+  }
+  100% {
+    left: -100px;
+  }
+}
